@@ -1,0 +1,144 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--main-color);
+    user-select: none;
+}
+canvas{
+    pointer-events: none;
+}
+:root{
+    --main-color:rgb(159, 228, 255);
+    --dark-color:rgb(0, 61, 99);
+    --selected:rgb(156, 156, 156);
+    --accent:rgb(255, 255, 255);
+}
+.title{
+    width: auto;
+    height:auto;
+    max-height: 100px;
+    color:var(--main-color);
+    max-width: 50%;
+    opacity: 1;
+}
+.lines{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    pointer-events: none;
+}
+
+.container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    z-index:1
+}
+.bg{
+    width:100%;
+    height:100vh;
+    position: absolute;;
+    z-index: -2;
+}
+.letter{
+    z-index:2;
+    width: 7vh;
+    height: 7vh;
+    background-color: var(--accent);
+    text-align: center;
+    justify-content: center;
+    line-height: 7vh;
+    border-radius: 100%;
+    font-size: calc(7vh / 2);
+    transition: 0.2s;
+}
+.display{
+    height:2vh;
+}
+.theme{
+    color:var(--dark-color);
+    width:30vw;
+    min-width: 300px;
+}
+.board{
+    margin-top: 2vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 7vh);
+    grid-gap: 1vh;
+}
+.date>input{
+    padding: 5px;
+    margin: 5px;
+    width:5vw;
+    text-align: center;
+    border:none;
+    border-radius: 10px;;
+    z-index: 100;
+    min-width:70px;
+}
+.date>button{
+    background-color: var(--dark-color);
+    padding: 5px;
+    margin: 5px;
+    width:5vw;
+    text-align: center;
+    border:none;
+    border-radius: 10px;;
+    z-index: 100;
+    pointer-events: all;
+    color:white;
+    transition:0.2s;
+    min-width:100px;
+}
+.date>button:hover{
+    width:6vw;
+}
+.date>button:active{
+    background-color: var(--accent);
+    color:var(--dark-color)
+}
+.date>input:active{
+    border: none;
+}
+.date{
+    z-index: 10;
+    margin-top: 2vh;
+    border-radius: 10px;
+    WIDTH:100%;
+}
+.word{
+    background-color: var(--dark-color);
+    color:white;
+}
+.gram{
+    background-color: rgb(255, 145, 0);
+    color:white;
+}
+.selected{
+    background-color: var(--selected);
+}
+.line {
+    position: absolute;
+    border-bottom: 2px solid var(--selected); 
+    pointer-events: none;
+    z-index: -1;
+}
+.uiButton{
+    font-weight: bolder;
+    font-size: 40px;
+    border: none;
+    color:white;
+    background:none;
+    margin:25px;
+    width:20%;
+    height:7vh;
+    transition:0.2s;
+}
+.uiButton:hover{
+    transition:0.2s;
+}
