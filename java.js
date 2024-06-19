@@ -73,7 +73,6 @@ function drawLineBetweenElements(canv,elem1, elem2,color) {
 }
 
 function loadLetters(matrix){
-    document.querySelector(".found").textContent = "Found 0/"+days['currentDate']['themeWords'].length +1
     board.innerHTML = ""
     for (rowIndex in matrix){
         let row = matrix[rowIndex]
@@ -147,6 +146,7 @@ function wordsToArray(words){
 function loadDate(date){
     currentDate = date
     themeText.innerHTML = days[date]['clue']
+    document.querySelector(".found").textContent = "Found 0/"+days[currentDate]['themeWords'].length +1
     let info = days[date]
     let words = wordsToArray(info["startingBoard"])
     loadLetters(words)
@@ -191,10 +191,10 @@ document.addEventListener('mouseup',()=>{
     for (button of selected){
         if (spanagram){
             button.classList.add("gram")
-            document.querySelector(".found").textContent = "Found "+found.length+"/"+days['currentDate']['themeWords'].length +1
+            document.querySelector(".found").textContent = "Found "+found.length+"/"+days[currentDate]['themeWords'].length +1
         }else if (wordFound){
             button.classList.add("word")
-            document.querySelector(".found").textContent = "Found "+found.length+"/"+days['currentDate']['themeWords'].length +1
+            document.querySelector(".found").textContent = "Found "+found.length+"/"+days[currentDate]['themeWords'].length +1
         }else{
             changeText("Not a theme word")
         }
