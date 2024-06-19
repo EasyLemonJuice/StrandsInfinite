@@ -19,7 +19,7 @@ canvas{
 .title{
     width: auto;
     height:auto;
-    max-height: 100px;
+    max-height: 50px;
     color:var(--main-color);
     max-width: 50%;
     opacity: 1;
