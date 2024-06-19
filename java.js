@@ -73,7 +73,7 @@ function drawLineBetweenElements(canv,elem1, elem2,color) {
 }
 
 function loadLetters(matrix){
-    document.querySelector(".found").textContent = "Found 0/"+days['currentDate']['themeWords']+1
+    document.querySelector(".found").textContent = "Found 0/"+days['currentDate']['themeWords'].length +1
     board.innerHTML = ""
     for (rowIndex in matrix){
         let row = matrix[rowIndex]
@@ -194,7 +194,7 @@ document.addEventListener('mouseup',()=>{
             
         }else if (wordFound){
             button.classList.add("word")
-            
+            document.querySelector(".found").textContent = "Found "+found.length+"/"+days['currentDate']['themeWords'].length +1
         }else{
             changeText("Not a theme word")
         }
