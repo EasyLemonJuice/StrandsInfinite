@@ -191,7 +191,7 @@ document.addEventListener('mouseup',()=>{
     for (button of selected){
         if (spanagram){
             button.classList.add("gram")
-            
+            document.querySelector(".found").textContent = "Found "+found.length+"/"+days['currentDate']['themeWords'].length +1
         }else if (wordFound){
             button.classList.add("word")
             document.querySelector(".found").textContent = "Found "+found.length+"/"+days['currentDate']['themeWords'].length +1
