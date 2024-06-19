@@ -5,6 +5,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--main-color);
     user-select: none;
+    overflow:hidden;
 }
 canvas{
     pointer-events: none;
