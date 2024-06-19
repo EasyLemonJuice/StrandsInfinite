@@ -73,6 +73,7 @@ function drawLineBetweenElements(canv,elem1, elem2,color) {
 }
 
 function loadLetters(matrix){
+    document.querySelector(".found").textContent = "Found 0/"+days['currentDate']['themeWords']+1
     board.innerHTML = ""
     for (rowIndex in matrix){
         let row = matrix[rowIndex]
